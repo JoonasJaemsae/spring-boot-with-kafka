@@ -10,6 +10,11 @@ public class KafkaProducer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaProducer.class);
 
+    /*
+     * KafkaTemplate reads the properties in application.properties.
+     * Properties can be configured programmatically as well in,
+     * for example, ProducerFactory or ConsumerFactory.
+     */
     private KafkaTemplate<String, String> kafkaTemplate;
 
     public KafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
