@@ -6,17 +6,21 @@ import org.springframework.kafka.config.TopicBuilder;
 
 import org.apache.kafka.clients.admin.NewTopic;
 
+/*
+ * The @Configuration annotation here ensures that the
+ * topics exist or are created at application start-up.
+ */
 @Configuration
 public class KafkaTopicConfig {
 
     @Bean
-    public NewTopic testTopic() {
+    public NewTopic createStringTopic() {
         return TopicBuilder.name("myTopic")
                 .build();
     }
 
     @Bean
-    public NewTopic testJsonTopic() {
+    public NewTopic createJsonTopic() {
         return TopicBuilder.name("myJsonTopic")
                 .build();
     }
