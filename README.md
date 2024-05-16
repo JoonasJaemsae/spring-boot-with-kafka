@@ -16,8 +16,8 @@ Open another terminal session in the same location and run:
 
 ## Listen to events in a topic
 
-``bin/kafka-console-consumer.sh --topic test-topic --from-beginning --bootstrap-server localhost:9092``
+``bin/kafka-console-consumer.sh --topic myTopic --from-beginning --bootstrap-server localhost:9092``
 
 ## Listing all topics
 
-$ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+``bin/kafka-topics.sh --list --bootstrap-server localhost:9092``
