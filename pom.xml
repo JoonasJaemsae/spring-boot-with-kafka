@@ -8,7 +8,7 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>JoonasJaemsae</groupId>
+	<groupId>com.example</groupId>
 	<artifactId>SpringBootAppWithKafka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Spring Boot App With Kafka</name>
@@ -31,7 +31,12 @@
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
-			<version>3.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
@@ -41,7 +46,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.baeldung.spring.kafka.KafkaApplication</mainClass>
+					<mainClass>com.example.kafka.Application</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
