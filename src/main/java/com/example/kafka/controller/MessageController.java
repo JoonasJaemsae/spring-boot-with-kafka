@@ -18,10 +18,13 @@ public class MessageController  {
         this.kafkaProducer = kafkaProducer;
     }
 
-    // http:localhost:8080/api/v1/kafka/publish?message=hello world
+    /*
+     * Send String messages to the below GET request address:
+     * http:localhost:8080/api/v1/kafka/publish?message={message}
+     */
     @GetMapping("/publish")
     public ResponseEntity<String> publish(@RequestParam("message") String message) {
         kafkaProducer.sendMessage(message);
-        return ResponseEntity.ok("Message sent to the topic");
+        return ResponseEntity.ok("Message sent to topic.");
     }
 }
