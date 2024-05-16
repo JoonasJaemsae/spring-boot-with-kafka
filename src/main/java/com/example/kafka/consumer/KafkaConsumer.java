@@ -13,6 +13,7 @@ public class KafkaConsumer {
     // Whenever a producer sends a message to the topic,
     // consumer will receive and display it.
     // groupId is the same as in application.properties
+    // If this Listener is sent a JSON object, it will result in an error while running the app.
     @KafkaListener(topics = "myTopic", groupId = "myGroup")
     public void consume(String message) {
         LOGGER.info(String.format("Message received by Consumer: %s", message));
