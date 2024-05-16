@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Helpers ###
+kafka_2.13-3.7.0/
+
